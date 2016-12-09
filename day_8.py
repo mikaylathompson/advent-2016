@@ -9,11 +9,13 @@ class ScreenData:
     def __str__(self):
         print("\n")
         for row in self.data:
-            for cell in row:
+            for i, cell in enumerate(row):
                 if cell:
                     print("X", end="")
                 else:
-                    print(".", end="")
+                    print(" ", end="")
+                if i % 5 == 4:
+                    print("     ", end="")
             print("\n")
         print("\n")
         return ""
