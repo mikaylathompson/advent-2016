@@ -11,7 +11,7 @@ def decode(fname):
                 counters[j][letter] += 1
 
     for c in counters:
-        print(c.most_common(1))
+        print(c.most_common()[::-1][0])
 
     return
 
